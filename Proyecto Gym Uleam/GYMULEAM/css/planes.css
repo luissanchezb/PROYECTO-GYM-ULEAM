@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;600;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow';
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #dde1e9;
+}
+
+/* ENCABEZADO - MENU */
+
+.contenedor-header{
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid #1f283e;
+    background-color: rgba(0,0,0,.7);
+    z-index: 99;
+    padding: 0 20px;
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    color: rgb(197, 12, 12);
+}
+.txtRojo{
+    color:#1cdc26;
+}
+.contenedor-header header nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    text-transform: uppercase;
+}
+.contenedor-header header nav a:hover{
+    color: #ff1133;
+}
+.contenedor-header header .redes a{
+    text-decoration: none;
+    color: #1cdc26;
+    display: inline-block;
+    padding: 5px 8px;
+}
+.contenedor-header header .redes a:hover{
+    color: #ff1133;
+}
+.nav-responsive{
+    display: none;
+    font-size: 25px;
+ }
+
+
+
+/* *********** */
+/* PLANES */
+/* *********** */
+.equipo{
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 95px;
+    background-color: #dde1e9;
+}
+.equipo .contenedor-titulo{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+.equipo  .contenedor-titulo .numero{
+    color: #ff1133;
+    font-weight: bold;
+    display: block;
+    font-size: 5rem;
+}
+.equipo .contenedor-titulo .info{
+    margin-left: 30px;
+}
+.equipo .contenedor-titulo .info .frase{
+    color: #ff1133;
+}
+.equipo .contenedor-titulo .info h2{
+    font-size: 3rem;
+}
+.equipo .fila{
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+.equipo .fila .col{
+    width: 25%;
+}
+.equipo .fila .col img{
+   max-height: 400px;
+   display: block;
+   margin: auto;
+}
+.equipo .fila .info{
+    border: 5px solid #1f283e;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+    background: linear-gradient(#ff1133, #9a0e23);
+    color: #fff;
+}
+.equipo .fila .info p{
+    margin: 20px 0;
+}
+.equipo .fila .info a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 20px;
+}
+
+
+
+
+/* *********** */
+/* FOOTER */
+/* *********** */
+footer{
+    background-color: #151623;
+    padding: 30px 0;
+}
+footer .info{
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+footer .info p{
+    color: #797e8e;
+}
+footer .info a{
+    text-decoration: none;
+    color: #797e8e;
+    display: inline-block;
+    margin: 0 15px;
+}
+/* *********** */
+/* RESPONSIVE */
+/* *********** */
+@media only screen and (max-width: 900px) {
+    header nav{
+        position: initial;
+        display: none;
+        transform: translate(0);
+    }
+    header .redes{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position:absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color:#151623;
+        z-index: 99;
+    }
+    nav.responsive a{
+        display: block;
+        width: fit-content;
+        margin: 10px auto;
+        font-size: 30px;
+    }
+    .inicio .opciones{
+        display: none;
+    }
+    .nosotros .fila{
+        display: block;
+    }
+    .nosotros .fila .col{
+        width: 100%;
+        margin: auto;
+    }
+    .nosotros .fila .col img{
+        max-width: 200px;
+        display: block;
+        margin: auto;
+    }
+    .servicios .contenido-seccion .fila{
+        display: block;
+    }
+    .servicios .contenido-seccion .fila .col{
+       width: 100%;
+    }
+    .comodidades .fila{
+        display: block;
+    }
+    .comodidades .fila .col{
+        width: 100%;
+    }
+    .comodidades .fila .col img{
+        max-width: 200px;
+    }
+
+    .equipo .fila{
+        display: block;
+    }
+    .equipo .fila .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .equipo .fila .col img{
+        max-height: 200px;
+    }
+    .equipo .fila .info{
+        max-width: 250px;
+        margin: auto;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contacto .fila-datos{
+        display: block;
+    }
+    .contacto .fila-datos .col{
+        margin-bottom: 20px;
+    }
+    footer .info{
+        display: block;
+        text-align: center;
+    }
+    footer .info p{
+        margin-bottom: 10px;
+    }
+
+
+
+
+
+
+}
+
